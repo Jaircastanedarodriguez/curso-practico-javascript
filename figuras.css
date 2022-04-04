@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e6e6e6;
+}
+
+header {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+
+}
+
+.cuadrado,
+.triangulo,
+.circulo {
+    background-color: aqua;
+    margin: 0;
+    padding: 20px;
+
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    background-color: aliceblue;
+}
+
+.triangulo{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+}
+
+
+section h2 {
+    margin: 0;
+    padding: 10px;
+    width: auto;
+}
+
+section label {
+    margin: 0;
+    padding: 0;
+}
+
+section input {
+    background-color: red;
+    margin: 10px 0;
+
+}
+
+section button{
+    margin: 10px 0;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
