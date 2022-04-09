@@ -45,6 +45,10 @@ section h2 {
     width: auto;
 }
 
+form{
+    display: grid;
+}
+
 section label {
     margin: 0;
     padding: 0;
