@@ -5,46 +5,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;700&display=swap" rel="stylesheet">
     <title>Porcentajes y descuentos | Curso practico de JavaScript</title>
     <link rel="stylesheet" href="./Descuentos.css">
 </head>
 
+
 <body>
+    <!-- Fondo de la aplicación -->
+    <div class="bg_color">
+        <!-- Cuadro de circulos superior izquierdo -->
+        <div class="patrones1">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <!-- Wave en la parte inferior -->
+        <div class="wave"></div>
+        <!-- Cuadro de circulos inferior derecha -->
+        <div class="patrones patrones2">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+<!-- Contenido principal de la calculadora de descuentos -->
+    <div class="contenedor"> <!-- Contenedor principal --> 
+        <section class="Calculadora"> <!-- Sección de la calculadora -->
+            <h2>Calcula el precio a pagar de tus productos con descuento</h2> <!-- Titulo de la calculadora -->
 
-    <header>
-        <h1>Porcentajes y descuentos</h1>
-        <p>Este es el segundo taller del curso práctico de JavaScript</p>
-    </header>
+            <form action=""> <!-- Formulario de la calculadora -->
+                <label for="InputPrice">Precio de tu producto:</label> <!-- Primer inten del formulario -->
+                <input id="InputPrice" type="number">
 
-    <section class="Calculadora">
-        <h2>Calcula precio a pagar de tus productos con descuento</h2>
+                <label for="InputDiscount">Descuento de tu producto en %:</label> <!-- Segundo inten del formulario -->
+                <input id="InputDiscount" type="number">
 
-        <form action="">
-            <label for="InputPrice">Precio de tu producto:</label>
-            <input id="InputPrice" type="number">
+                <label for="Cupon">Cupon de decuento</label> <!-- Selector para los cupones de descuento -->
+                <select name="" id="Cupon" type="number">
+                    <option value="0"></option>
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                    <option value="30">30%</option>
+                    <option value="50">50%</option>
+                </select>
 
-            <label for="InputDiscount">Descuento de tu producto en %:</label>
-            <input id="InputDiscount" type="number">
+                <button type="button" onclick="OnClickButtonPriceDiscount()"> <!-- Botóm para enviar los datos  -->
+                    Calcular precio con descuento
+                </button>
+            </form>
 
-            <label for="Cupon">Cupon de decuento</label>
+            <div class="resultado-contenedor"> <!-- Sección para mostrar los resultados -->
+                <section class="resultado">
+                    <h4>El precio con descuento es:</h4>
+                    <p id="ResultP"></p>
+                </section>
+            </div>
+        </section>
+    </div>
 
-            <select name="" id="Cupon" type="number" >
-                <option value="0"></option>
-                <option value="5">5%</option>
-                <option value="10">10%</option>
-                <option value="15">15%</option>
-                <option value="20">20%</option>
-                <option value="30">30%</option>
-                <option value="50">50%</option>
-            </select>
 
-            <button type="button" onclick="OnClickButtonPriceDiscount()">
-                Calcular precio con descuento
-            </button>
-
-            <p id="ResultP"></p>
-        </form>
-    </section>
 
 
 

@@ -1,86 +1,251 @@
 * {
     margin: 0;
     padding: 0;
+} 
+
+/*--------------------------------------- Estilos del fondo */
+/*Propiedades del wave */
+.bg_color {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: bottom;
+    bottom: 0;
 }
 
-body{
-    background-color: #eee;
+.wave {
+    background-color: #f6fafc;
+    -webkit-mask-image: url("../wave.svg");
+    mask-image: url("../wave.svg");
+    -webkit-mask-size: cover;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    background-position: bottom;
+    bottom: -0%;
+} 
+
+/* Propiedades de los cuadros de circulos */
+
+.bg_color .patrones1,
+.bg_color .patrones2 {
+    width: 200px;
+    height: 200px;
+    margin:100px;
+    position: absolute;
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
 }
 
-header {
+/* Forma de los puntos */
+.bg_color .patrones1 .circle,
+.bg_color .patrones2 .circle {
+    background-color: #666666;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.bg_color .patrones2 {
+    position: absolute;
+    margin: 400px 100px 0 0;
+    right: 0;
+}
+
+/*--------------------------------------------- Centrado verticalmente del body sobre el html */
+
+body {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 20px 0;
 }
 
+.contenedor {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    max-width: 50%;
+    font-family: 'Mukta', sans-serif;
+    margin: auto;
+}
+
+/* ----------------------------------Estilos de la casilla de la calculadora*/
+
+/* Propiedades del cuadro de la calculadora */
 .Calculadora {
-    width: 500px;
+    background-color: #fff;
+    border: 1px solid #bababa;
+    box-shadow: 0 5px 20px #bababa;
+    padding: 10px 0 0 0;
+    border-radius: 20px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 10px;
-    margin: 10px auto;
-    border: #bababa 1px solid;
-    border-radius: 6px;    
 }
 
+/* Margen del titulo de la calculadora */
 h2 {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin: 20px 0 0 0;
+    padding: 0 30px;
 }
 
+/*----------------------------------------------  Estilos del formulario */
+/* Propiedades del formulario */
 form {
-    padding: 10px 0;
     display: flex;
     flex-direction: column;
-    
+    width: 80%;
+    align-items: center;
 }
 
-label {
-    padding: 10px;
-    display: flex;
-    justify-content: left;
-    margin-top: 15px;
-}
-
+/* Propiedades para los imput */
 input {
-    background-color:white;
-    width: 300px;
-    padding: 5px;
-    text-align: center;
-    justify-content: center;
+    background-color: #e8eff1;
     border-color: #fff;
-    border-radius: 6px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    height: 30px;
+    width: 100%;
+    text-align: center;
 }
 
-#Cupon{
-    padding: 5px;
+/* Quitar las flechas en el imput tipo numero */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
+
+
+/* Propiedades para el selector */
+#Cupon {
+    background-color: #e8eff1;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Propiedades para el boton */
 
 button {
-    margin: 10px 0;
     background-color: #007aff;
-    border: 0;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    border: 1px solid #fff;
     padding: 15px 0;
+    width: 70%;
+    margin: 10px 0 15px 0;
+    font-size: 15px;
+}
+
+/* Cursor pointer para cuando el mause pase sobre el botón */
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    border: 1px solid #000;
+    color: #eee;
+}
+
+/* Propiedades de los label */
+
+label {
+    margin: 20px 0 0px 0;
+}
+
+/*-------------------------------- Estilos del resultado */
+
+.resultado {
     display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 20px;
+    color: #fff;
     align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    color: white;
-}
+    text-align: center;
+} 
 
-button:active{
-    background-color: white;
-    color: #007aff;
-    border: #0000FF 1px solid;
-}
 
-#ResultP {
+.resultado-contenedor {
+    background-color: #007aff;
+    height: 50px;
+    width: 100%;
+    padding: 0;
+    border-radius: 0 0 20px 20px;
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    border: 0 1px 1px 1px solid #bababa;
 }
+
+.resultado-contenedor p{
+    font-style: bold;
+    font-size: 20px;
+}
+
+.resultado-contenedor h4{
+    font-size: 20px;
+}
+
+/* ----------------------------------------- Responsive para pantallas mas pequeñas de 768px */
+
+@media screen and (max-width: 768px) {
+    .bg_color .patrones2 {
+        position: absolute;
+        margin: 750px 90px 0 0;
+        right: 0;
+    }
+}
+
+/*----------------------------------------- Responsive para pantallas mas pequeñas de 600px */
+
+@media screen and (max-width: 600px) {
+    
+    .contenedor {
+        min-width: 350px;
+        
+    }
+
+    .bg_color .patrones2 {
+        position: absolute;
+        margin: 0;
+        right: 0;
+    }
+
+    .bg_color .patrones1 .circle{
+        background-color: #fff;
+    }
+}
+
+/*----------------------------------------- Responsive para pantallas mas pequeñas de 400px */
+
+@media screen and (max-width: 400px) {
+    
+ 
+    .contenedor {
+        min-width: 300px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .bg_color .patrones2 {
+        position: absolute;
+        margin: 0;
+        right: 0;
+    }
+}
+
