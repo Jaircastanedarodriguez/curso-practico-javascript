@@ -106,10 +106,15 @@ form {
     align-items: center;
 }
 
+/* Propiedades de los label */
+
+label {
+    margin: 20px 0 0 0;
+}
+
 /* Propiedades para los imput */
 input {
     background-color: #e8eff1;
-    border-color: #fff;
     border-radius: 10px;
     border: 1px solid #eee;
     height: 30px;
@@ -141,7 +146,7 @@ input[type=number]::-webkit-outer-spin-button {
 button {
     background-color: #007aff;
     color: #fff;
-    border: none;
+    
     border-radius: 100px;
     border: 1px solid #fff;
     padding: 15px 0;
@@ -160,11 +165,6 @@ button:active {
     color: #eee;
 }
 
-/* Propiedades de los label */
-
-label {
-    margin: 20px 0 0px 0;
-}
 
 /*-------------------------------- Estilos del resultado */
 

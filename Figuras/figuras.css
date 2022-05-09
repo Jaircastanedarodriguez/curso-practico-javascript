@@ -1,69 +1,130 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: #e6e6e6;
-}
-
-header {
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-
-}
-
-.cuadrado,
-.triangulo,
-.circulo {
-    background-color: aqua;
-    margin: 0;
-    padding: 20px;
-
+    font-family: 'Mukta', sans-serif;
+    height: 100vh;
+    display: flex;
 }
 
 .container {
-    width: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
     display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
-    background-color: aliceblue;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.triangulo{
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: auto;
-}
-
-
-section h2 {
-    margin: 0;
-    padding: 10px;
-    width: auto;
-}
-
-form{
-    display: grid;
-}
-
-section label {
-    margin: 0;
-    padding: 0;
-}
-
-section input {
-    background-color: red;
-    margin: 10px 0;
-
-}
-
-section button{
-    margin: 10px 0;
-    width: 150px;
+.card {
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #bababa;
+    box-shadow: 0 5px 20px #bababa;
+    padding: 20px 0 0 0;
+    max-width: 500px;
+    max-height: 500px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
+
+h2 {
+    margin: 10px 0 5px 0;
+    text-align: center;
+    padding: 0 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+}
+
+label {
+    /* margin: 20px 0 0 0; */
+    
+}
+
+input {
+    background-color: #e8eff1;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    margin: 4px 0 0 0;
+}
+
+/* Quitar las flechas en el imput tipo numero */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+button {
+    background-color: #007aff;
+    color: #fff;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    padding: 15px;
+    margin: 0 0 0 0;
+    width: 140px;
+
+    
+}
+
+.boton {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin: 0 0 20px 0;
+}
+
+.resultado-contendor {
+    background-color: #007aff;
+    color: #fff;
+    height: 100px;
+    width: 100%;
+    padding: 0;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resultado-contendor .resultado-perimetro {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 0 20px;
+}
+
+.resultado-contendor .resultado-perimetro div {
+    display: flex;
+}
+
+.resultado-contendor .resultado-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.resultado-contendor .resultado-area div{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+

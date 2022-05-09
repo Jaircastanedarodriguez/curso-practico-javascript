@@ -24,7 +24,6 @@ function OnClickButtonPriceDiscount() {
     DescuentoNumeroEntero = parseInt(DiscountValue);
     CuponNumeroEntero = parseInt(CuponValue);
     let DescuentoValue;
-    const Result = document.getElementById("ResultP");
 
     if (DiscountValue == 0) {
         DescuentoValue = CuponValue;
