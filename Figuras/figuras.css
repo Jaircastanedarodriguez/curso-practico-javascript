@@ -1,15 +1,23 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* --------------------------------------------------Fondo ------------------------------------------- */
+/* Fondo de la pagina web, se agrega el wave */
 body {
     font-family: 'Mukta', sans-serif;
     height: 100vh;
+    width: 100%;
+    background-image: url(../wave.svg);
+    background-size: cover;
+    background-position: left;
     display: flex;
 }
 
+/* -----------------------------------------------Contenedor--------------------------------------------- */
+/* Se definen dimensiones del contenedor general y se crea la grid para la distribución de las tarjetas */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -20,6 +28,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* -------------------------------------------Tarjetas de las figuras geometricas -------------------------------- */
+/* Estilos generales de las tarjetas */
 .card {
     border-radius: 20px;
     background-color: #fff;
@@ -33,12 +43,14 @@ body {
     align-items: center;
 }
 
+/* Estilos de los titulos de las tarjetas */
 h2 {
     margin: 10px 0 5px 0;
     text-align: center;
     padding: 0 30px;
 }
 
+/* Estilos generales del formulario, distribución, dimenciones, etc */
 form {
     display: flex;
     flex-direction: column;
@@ -48,11 +60,7 @@ form {
     width: 80%;
 }
 
-label {
-    /* margin: 20px 0 0 0; */
-    
-}
-
+/* Estilos de los imput de los formularios, color, bordes, dimensiones, etc */
 input {
     background-color: #e8eff1;
     border-radius: 10px;
@@ -64,12 +72,13 @@ input {
 }
 
 /* Quitar las flechas en el imput tipo numero */
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
+/* Estilos generales de los botones de la pagina  */
 button {
     background-color: #007aff;
     color: #fff;
@@ -78,17 +87,29 @@ button {
     padding: 15px;
     margin: 0 0 0 0;
     width: 140px;
-
-    
 }
 
+/* Distribución de los botones en un contendor */
 .boton {
     display: flex;
     gap: 10px;
     justify-content: flex-end;
-    margin: 0 0 20px 0;
+    margin: 10px 0 20px 0;
 }
 
+/* Estilos para los botones cuando el cursor pase sobre ellos  */
+button:hover{
+    cursor: pointer;
+}
+
+/* Estlos para los botones cuando sean activados */
+button:active {
+    border: 1px solid #000;
+    color: #eee;
+}
+
+/* -----------------------------------------------Resultados--------------------------------------- */
+/* Estilos generales de los resultados  */
 .resultado-contendor {
     background-color: #007aff;
     color: #fff;
@@ -100,31 +121,219 @@ button {
     flex-direction: column;
 }
 
+/* Estilos de los resultados de los perimetros, distribución general y espacios */
 .resultado-contendor .resultado-perimetro {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px 0 20px;
 }
 
+/* Estilos de los resultados, distribución interna de los perimetros */
 .resultado-contendor .resultado-perimetro div {
     display: flex;
 }
 
+/* Estilos de los resultados de las areas, distribución general y espacio */
 .resultado-contendor .resultado-area {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
 }
 
-.resultado-contendor .resultado-area div{
+/* Estilos de los resutladis, distribución interna para las areas */
+.resultado-contendor .resultado-area div {
     display: flex;
 }
 
 
 
+/* ---------------------------------------------Responsive design ---------------------------------------------------------- */
+
+/*-------------------------------- Pantallas mas pequeñas de 1365px-------------------------------- */
+@media screen and (max-width: 1365px) {
+    
+     /* Distribución para las tarjetas */
+    .card{
+        width: 100%;
+        max-width: 2000px;
+    }
+
+    /* Creación de la grid para la nueva distribución */
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "triangulo triangulo"
+                             "cuadrado circulo";
+    }
+
+    /* Ubicación de la tarjeta para el cuadro */
+    .cuadrado {
+        grid-area: cuadrado;
+    }
+
+    /* Ubicación de la tarjeta para el triangulo */
+    .triangulo {
+        grid-area: triangulo;
+        max-width: 2000px;
+        grid-gap: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Diseños generales de la tarjeta del triangulo, nueva distribución, margenes y colores */
+    .resultado-contenedor-triangulo {
+        margin: 20px;
+        border-radius: 0;
+        background-color: #fff;
+        gap: 20px;
+        justify-content: center;
+    }
 
 
+    /* Muestra de resultados del perimetro para el triangulo */
+    .resultado-contenedor-triangulo .resultado-perimetro {
+        background-color: #007aff;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    /* Muestra de resultados del area para el triangulo */
+    .resultado-contenedor-triangulo .resultado-area {
+        background-color: #007aff;
+        height: 50px;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    /* Ubicación de la tarjeta para el circulo */
+    .circulo {
+        grid-area: circulo;
+    }
+}
 
 
+/* ---------------------------------Pantalla mas pequeña de 920 px ------------------------------- */
+
+@media screen and (max-width:920px) {
+
+    /* Dimensión del body */
+    body {
+        height: 100%;}
+
+    /* Distribución del contenedor */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    /* Distribución de las tarjetas */
+    .card {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Distribución de los resultados */
+    .resultado-contendor {
+        height: 50px;
+        font-size: 11px;
+    }
+
+    /* Espacios para los resultados del perimetro */
+    .resultado-contendor .resultado-perimetro {
+        padding: 5px 15px 0 15px;
+    }
+
+    /* Espacios para los resultados del area */
+    .resultado-contendor .resultado-area {
+        padding: 0 15px;
+    }
+
+    /* Estilos para los resutados del triangulo, quitar 
+    los estilos del diseño de la pantalla anterior */
+    .resultado-contenedor-triangulo {
+        margin: 0px;
+        height: 50px;
+        border-radius: 0;
+        background-color: #007aff;
+        gap: 0px;
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Estilos de los resultados del triangulo para el perimetro */
+    .resultado-contenedor-triangulo .resultado-perimetro {
+        background-color: #007aff;
+        height: auto;
+        border-radius: 10px;
+        padding: 5px 15px 0 15px;
+    }
+
+    /* Estilos de los resultados del triangulo para el area */
+    .resultado-contenedor-triangulo .resultado-area {
+        background-color: #007aff;
+        height: auto;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0 15px;
+    }
+
+    /* Espacios para los botones */
+    .boton {
+        margin-top: 20px;
+    }   
+}
 
 
+/* ----------------------------------- Pantalla mas pequeña de 720px -------------------------------------- */
+
+@media screen and (max-width: 720px) {
+    
+    /* Ancho de las tarjetas */
+    .card{
+        width: 100%;
+    }
+
+    /* Ancho del formulario */
+    form {
+        width: 90%;
+    }
+
+    /* Cambio de tamaño de letra */
+    .card h2{
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    /* Espacio de los botones */
+    .boton {
+        margin: 10px; 
+    }
+
+}
+
+/* --------------------------------- Pantalla mas pequeña de 400 px ------------------------------------------ */
+@media screen and (max-width: 400px) {
+    
+    /* Ancho y espacios del contenedor */
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Cambio de tamaño de fuente del titulo y dimensiones */
+    .card h2{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    /* Cambio de tamaño de fuente en label y botones  */
+    form label,
+    form button {
+        font-size: 12px;
+    }
+}
