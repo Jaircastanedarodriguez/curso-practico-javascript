@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #333944;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "promedio promedio"
+                         "mediana moda";
+}
+
+.card {
+    background-color: #1D202B;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.promedio {
+    grid-area: promedio;
+}
+
+.mediana {
+    grid-area: mediana;
+}
+
+.moda {
+    grid-area: moda;
+}
+
+input {
+    border: none;
+}
+
+button{
+    background-color: #f54b64;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.promedio {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "titulo titulo"
+                         "armetico ponderado";
+}
+
+.titulo-promedio{
+    grid-area: titulo;
+    text-align: center;
+    padding: 10px 0 20px 0;
+    font-size: 30px;
+}
+
+.aritmetico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.aritmetico h3{
+    padding: 10px;
+    font-size: 25px;
+}
+
+.aritmetico .formulario {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.aritmetico .formulario label{
+ margin: 0 0 5px 0;
+}
+
+.aritmetico .formulario input {
+    width: 90%;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.aritmetico .formulario button {
+    width: 60%;
+    margin: 10px auto;
+}
+
+
+
+

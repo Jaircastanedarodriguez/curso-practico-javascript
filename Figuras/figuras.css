@@ -181,7 +181,8 @@ button:active {
         flex-direction: row;
     }
 
-    /* Diseños generales de la tarjeta del triangulo, nueva distribución, margenes y colores */
+    /* Diseños generales de la tarjeta del triangulo,
+    920 nueva distribución, margenes y colores */
     .resultado-contenedor-triangulo {
         margin: 20px;
         border-radius: 0;
