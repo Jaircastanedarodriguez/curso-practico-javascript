@@ -18,14 +18,14 @@
                 <h3>Pomedio artimetico</h3>
                 <form action="" class="formulario">
                     <label for="valor1_aritmetico">Valor 1</label>
-                    <input type="text" id="valor1_aritmetico">
+                    <input type="number" class="valor_aritmetico">
                     <label for="valor2_aritmetico">Valor 2</label>
-                    <input type="text" id="valor2_aritmetico">
+                    <input type="number" class="valor_aritmetico">
                     <label for="valor3_aritmetico">Valor 3</label>
-                    <input type="text" id="valor3_aritmetico">
+                    <input type="number" class="valor_aritmetico">
                     <label for="valor4_aritmetico">Valor 4</label>
-                    <input type="text" id="valor4_aritmetico">
-                    <button type="button" onclick="CalculoPromedioAritmetico()">Calcular</button>
+                    <input type="number" class="valor_aritmetico">
+                    <button type="button" onclick="viewsArrayInput()">Calcular</button>
                 </form>
                 <article class="resultado">
                     <h4>El promedio aritmetico es:</h4>
@@ -36,23 +36,30 @@
             <article class="ponderado">
                 <h3>Promedio ponderado acumulado</h3>
                 <form action="" class="formulario">
+                    <div class="valores-poderados">
                     <label for="valor1_ponderado">Valor 1</label>
-                    <input type="text" id="valor1_ponderado">
+                    <input type="number" id="valor1_ponderado">
                     <label for="valor2_ponderado">Valor 2</label>
-                    <input type="text" id="valor2_ponderado">
+                    <input type="number" id="valor2_ponderado">
                     <label for="valor3_ponderado">Valor 3</label>
-                    <input type="text" id="valor3_ponderado">
+                    <input type="number" id="valor3_ponderado">
                     <label for="valor4_ponderado">Valor 4</label>
-                    <input type="text" id="valor4_ponderado">
-
+                    <input type="number" id="valor4_ponderado">
+                    </div>
+                    
+                    <div class="peso-ponderado">
                     <label for="peso1">Peso 1</label>
-                    <input type="text" id="peso1">
+                    <input type="number" id="peso1">
                     <label for="peso2">Peso 2</label>
-                    <input type="text" id="peso2">
+                    <input type="number" id="peso2">
                     <label for="peso3">Peso 3</label>
-                    <input type="text" id="peso3">
+                    <input type="number" id="peso3">
                     <label for="peso4">Peso 4</label>
-                    <input type="text" id="peso4">
+                    <input type="number" id="peso4">
+                    </div>
+                    
+
+                    <button type="button" onclick="CalculoPromedioPonderado()" class="calcular-ponderado">Calcular</button>
                 </form>
                 <article class="resultado">
                     <h4>El promedio ponderado acumulado es:</h4>
