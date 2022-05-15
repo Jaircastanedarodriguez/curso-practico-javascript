@@ -3,11 +3,11 @@
     padding: 0;
 }
 
-body{
+body {
     background-color: #333944;
     color: #fff;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +16,7 @@ body{
 
 .container {
     width: 90%;
+    margin: 50px 0;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
@@ -26,8 +27,6 @@ body{
 .card {
     background-color: rgba(29, 32, 43, .8);
     border-radius: 10px;
-
-    color: r;
     padding: 20px;
 }
 
@@ -48,12 +47,21 @@ input {
     border: none;
 }
 
-button{
+button {
     background-color: #f54b64;
     color: #fff;
-    border: none;
+    border: 1px solid #333944;
     padding: 10px;
     border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    border: 1px solid #fff;
+    color: #333944;
 }
 
 .promedio {
@@ -61,10 +69,10 @@ button{
     grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "titulo titulo"
-                         "armetico ponderado";
+        "armetico ponderado";
 }
 
-.titulo-promedio{
+.titulo-promedio {
     grid-area: titulo;
     text-align: center;
     padding: 10px 0 20px 0;
@@ -79,28 +87,31 @@ button{
 }
 
 .aritmetico h3,
-.ponderado h3{
+.ponderado h3,
+.mediana h2 {
     padding: 10px;
     font-size: 25px;
     text-align: center;
     margin: 10px;
 }
 
-.aritmetico .formulario {
+.aritmetico .formulario,
+.mediana .formulario {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .aritmetico .formulario label,
-.ponderado .formulario label{
- margin: 0 0 5px 0;
+.ponderado .formulario label,
+.mediana .formulario {
+    margin: 0 0 5px 0;
 }
 
 .aritmetico .formulario input,
-.ponderado .formulario input{
+.ponderado .formulario input,
+.mediana .formulario input {
     width: 20%;
     margin: 0 0 20px 0;
     padding: 10px;
@@ -108,12 +119,13 @@ button{
     border-radius: 10px;
 }
 
-.aritmetico .formulario button {
-    width: 60%;
+.aritmetico .formulario button,
+.mediana .formulario button {
+    width: 30%;
     margin: 10px auto;
 }
 
-.ponderado h3{
+.ponderado h3 {
     margin: 10px;
 }
 
@@ -123,7 +135,7 @@ button{
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "valores peso"
-                         "boton boton";
+        "boton boton";
 }
 
 .valores-poderados {
@@ -144,10 +156,12 @@ button{
     grid-area: boton;
     width: 30%;
     margin: 10px auto;
-
 }
 
-
-
-
+.mediana {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 

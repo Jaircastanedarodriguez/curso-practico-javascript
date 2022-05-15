@@ -8,9 +8,9 @@ function CalculoPromedioAritmetico() {
         });
 
     // Calculamos el promedio artimetico
-    let sumaLista = 0;  // Se crea una variable vacia
+    let sumaLista = 0; // Se crea una variable vacia
     // Con este for sumamos cada elemento del array, recorremos el array y vamos sumando cada digito al acumulado
-    for (let i = 0; i < arrayInput.length; i++) { 
+    for (let i = 0; i < arrayInput.length; i++) {
         sumaLista += arrayInput[i];
     }
     // Dividimos la suma de todos los elementos de array sobre el total del elementos
@@ -36,13 +36,13 @@ function CalculoPromedioPonderado() {
             peso.push(Number(datapeso.value));
         });
     // Tenemos 2 array, uno con los datos y otro con el peso de cada dato
-    
+
     // Creamos 2 variables, una para la suma del peso de los valores y la otra para la suma de los datos
     let pesoValor = 0;
     let sumaPeso = 0;
-    
+
     /* Recorremos el array de peso y en cada elemento lo vamos a multiplicar por un elemento del valor, luego este se
-     sumara al anterior, tambien (Aprovechando que los dos array miden lo mismo), sumamos todos los datos de peso*/
+    sumara al anterior, tambien (Aprovechando que los dos array miden lo mismo), sumamos todos los datos de peso*/
     for (i = 0; i < peso.length; i++) {
         pesoValor += (peso[i] * datos[i]);
         sumaPeso += peso[i];
@@ -54,5 +54,15 @@ function CalculoPromedioPonderado() {
     const resultadoPonderado = document.getElementById("resultadoPromedioPonderado");
     // Escribimos el resultado en el elemento 
     resultadoPonderado.innerText = Ponderado;
+}
 
+function calcularMediana(){
+    let valores = new Array();
+    let medianaValue = document.getElementsByClassName("valor_mediana"), 
+    namesMedianaValue = [].map.call(medianaValue, function(dataMediana){
+        valores.push(Number(dataMediana.value));
+    }); 
+
+    console.log(valores);
+    
 }
