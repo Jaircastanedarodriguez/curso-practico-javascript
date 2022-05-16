@@ -83,13 +83,41 @@
                 </form>
             
 
-            <article class="resultado"></article>
+            <article class="resultado">
+                <h4>La mediana es:</h4>
+                <p id="resultadoMediana"></p>
+            </article>
         </section>
 
         <section class="card moda">
             <h2>Moda</h2>
-            <form action="" class="formulario"></form>
-            <article class="resultado"></article>
+            <form action="" class="formulario">
+                <div class="datos">
+                    <label for="valor1_moda">Valor 1</label>
+                    <input type="number" class="valor_moda" id="valor1_moda">
+                    <label for="valor2_moda">Valor 2</label>
+                    <input type="number" class="valor_moda" id="valor2_moda">
+                    <label for="valor3_moda">Valor 3</label>
+                    <input type="number" class="valor_moda" id="valor3_moda">
+                    <label for="valor4_moda">Valor 4</label>
+                    <input type="number" class="valor_moda" id="valor4_moda">
+                    <label for="valor5_moda">Valor 5</label>
+                    <input type="number" class="valor_moda" id="valor5_moda">
+                    <label for="valor6_moda">Valor 6</label>
+                    <input type="number" class="valor_moda" id="valor6_moda">
+                    <label for="valor7_moda">Valor 7</label>
+                    <input type="number" class="valor_moda" id="valor7_moda">
+                    <label for="valor8_moda">Valor 8</label>
+                    <input type="number" class="valor_moda" id="valor8_moda">
+                </div>
+
+
+                <button type="button" onclick="CalcularModa()">Calcular</button>
+            </form>
+            <article class="resultado">
+                <h4>La moda es:</h4>
+                <p id="resultadoModa"></p>
+            </article>
         </section>
     </main>
 

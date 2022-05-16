@@ -120,7 +120,8 @@ button:active {
 }
 
 .aritmetico .formulario button,
-.mediana .formulario button {
+.mediana .formulario button,
+.moda .formulario button {
     width: 30%;
     margin: 10px auto;
 }
@@ -162,6 +163,55 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Estilos moda */
+
+.moda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moda h2{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.moda .formulario {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
+
+.moda .formulario .datos {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.moda .formulario input {
+    width: 20%;
+    margin-bottom: 20px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.moda .formulario button{
+    
+}
+
+
+
+
+
+
 

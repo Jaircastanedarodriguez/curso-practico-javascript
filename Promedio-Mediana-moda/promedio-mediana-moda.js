@@ -56,13 +56,50 @@ function CalculoPromedioPonderado() {
     resultadoPonderado.innerText = Ponderado;
 }
 
-function calcularMediana(){
+// Función para calcular la mediana
+function calcularMediana() {
     let valores = new Array();
-    let medianaValue = document.getElementsByClassName("valor_mediana"), 
-    namesMedianaValue = [].map.call(medianaValue, function(dataMediana){
-        valores.push(Number(dataMediana.value));
-    }); 
+    let medianaValue = document.getElementsByClassName("valor_mediana"),
+        namesMedianaValue = [].map.call(medianaValue, function (dataMediana) {
+            valores.push(Number(dataMediana.value));
+        });
 
-    console.log(valores);
+    let numeroDatos = valores.length;
+    let resultadoMediana = document.getElementById("resultadoMediana");
+
+    function esPar(numeroDatos) {
+        b = numeroDatos % 2;
+
+        if (b == 0) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    if (esPar(numeroDatos) == 1) {
+        let posicionMediaMayor = Math.trunc(numeroDatos / 2);
+        let valorMediaMayor = valores[posicionMediaMayor];
+
+        let posicionMediaMenor = Math.trunc(numeroDatos / 2) - 1;
+        let valorMediaMenor = valores[posicionMediaMenor];
+
+        let valorMediaPar = (valorMediaMayor + valorMediaMenor) / 2;
+
+
+        mitad = numeroDatos / 2;
+        mediana = (mitad + (mitad + 1)) / 2;
+        resultadoMediana.innerText = valorMediaPar;
+
+    } else {
+        let valorMediaImpar = Math.trunc(numeroDatos / 2);
+
+        resultadoMediana.innerText = valores[valorMediaImpar];
+        console.log(valores[valorMediaImpar]);
+    }
+}
+
+// Función para calcular la moda
+function CalcularModa(){
+    let datosModa = new Array();
     
 }
