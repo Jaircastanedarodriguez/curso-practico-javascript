@@ -101,5 +101,34 @@ function calcularMediana() {
 // Función para calcular la moda
 function CalcularModa(){
     let datosModa = new Array();
-    
+    let modaValue = document.getElementsByClassName("valor_moda"),
+    namesModaValue = [].map.call(modaValue, function(dataModa){
+        datosModa.push(Number(dataModa.value));
+    });
+
+    let datosModaCount = {};
+
+    datosModa.map(
+        function (Elemento){
+            if(datosModaCount[Elemento]){
+                datosModaCount[Elemento] += 1;
+            }else{
+                datosModaCount[Elemento] = 1;
+            }
+        }
+    )
+
+    let datosArray = Object.entries(datosModaCount).sort(
+        function (ElementoA, ElementoB) {
+            return ElementoA[1] -ElementoB[1];
+        }
+    )
+
+    let CantidadDatosArray = datosArray.length;
+    let moda = datosArray[CantidadDatosArray -1];
+
+    // console.log(moda);
+
+    let resultadoModa = document.getElementById("resultadoModa");
+    resultadoModa.innerText = moda[0];
 }

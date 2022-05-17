@@ -12,9 +12,7 @@
 <body>
 
     <main class="container">
-        <section class="card promedio">
-            <h2 class="titulo-promedio">Promedio</h2>
-            <article class="aritmetico">
+            <section class="card aritmetico">
                 <h3>Pomedio artimetico</h3>
                 <form action="" class="formulario">
                     <label for="valor1_aritmetico">Valor 1</label>
@@ -31,57 +29,57 @@
                     <h4>El promedio aritmetico es:</h4>
                     <p id="resultadoPromedioAritmetico"></p>
                 </article>
-            </article>
+            </section>
 
-            <article class="ponderado">
+            <section class="card ponderado">
                 <h3>Promedio ponderado acumulado</h3>
                 <form action="" class="formulario">
                     <div class="valores-poderados">
-                    <label for="valor1_ponderado">Valor 1</label>
-                    <input type="number" class="valor_ponderado" id="valor1_ponderado">
-                    <label for="valor2_ponderado">Valor 2</label>
-                    <input type="number" class="valor_ponderado" id="valor2_ponderado">
-                    <label for="valor3_ponderado">Valor 3</label>
-                    <input type="number" class="valor_ponderado" id="valor3_ponderado">
-                    <label for="valor4_ponderado">Valor 4</label>
-                    <input type="number" class="valor_ponderado" id="valor4_ponderado">
+                        <label for="valor1_ponderado">Valor 1</label>
+                        <input type="number" class="valor_ponderado" id="valor1_ponderado">
+                        <label for="valor2_ponderado">Valor 2</label>
+                        <input type="number" class="valor_ponderado" id="valor2_ponderado">
+                        <label for="valor3_ponderado">Valor 3</label>
+                        <input type="number" class="valor_ponderado" id="valor3_ponderado">
+                        <label for="valor4_ponderado">Valor 4</label>
+                        <input type="number" class="valor_ponderado" id="valor4_ponderado">
                     </div>
-                    
+
                     <div class="peso-ponderado">
-                    <label for="peso1">Peso 1</label>
-                    <input type="number" class="peso" id="peso1">
-                    <label for="peso2">Peso 2</label>
-                    <input type="number" class="peso" id="peso2">
-                    <label for="peso3">Peso 3</label>
-                    <input type="number" class="peso" id="peso3">
-                    <label for="peso4">Peso 4</label>
-                    <input type="number" class="peso" id="peso4">
+                        <label for="peso1">Peso 1</label>
+                        <input type="number" class="peso" id="peso1">
+                        <label for="peso2">Peso 2</label>
+                        <input type="number" class="peso" id="peso2">
+                        <label for="peso3">Peso 3</label>
+                        <input type="number" class="peso" id="peso3">
+                        <label for="peso4">Peso 4</label>
+                        <input type="number" class="peso" id="peso4">
                     </div>
-                    
-                    <button type="button" onclick="CalculoPromedioPonderado()" class="calcular-ponderado">Calcular</button>
+
+                    <button type="button" onclick="CalculoPromedioPonderado()"
+                        class="calcular-ponderado">Calcular</button>
                 </form>
                 <article class="resultado">
                     <h4>El promedio ponderado acumulado es:</h4>
                     <p id="resultadoPromedioPonderado"></p>
                 </article>
-            </article>
-        </section>
+            </section>
 
         <section class="card mediana">
             <h2>Mediana</h2>
-                <form action="" class="formulario">
-                    <label for="valor1_mediana">Valor 1</label>
-                    <input type="number" class="valor_mediana" id="valor1_mediana">
-                    <label for="valor2_mediana">Valor 2</label>
-                    <input type="number" class="valor_mediana" id="valor2_mediana">
-                    <label for="valor3_mediana">Valor 3</label>
-                    <input type="number" class="valor_mediana" id="valor3_mediana">
-                    <label for="valor4_mediana">Valor 4</label>
-                    <input type="number" class="valor_mediana" id="valor4_mediana">
+            <form action="" class="formulario">
+                <label for="valor1_mediana">Valor 1</label>
+                <input type="number" class="valor_mediana" id="valor1_mediana">
+                <label for="valor2_mediana">Valor 2</label>
+                <input type="number" class="valor_mediana" id="valor2_mediana">
+                <label for="valor3_mediana">Valor 3</label>
+                <input type="number" class="valor_mediana" id="valor3_mediana">
+                <label for="valor4_mediana">Valor 4</label>
+                <input type="number" class="valor_mediana" id="valor4_mediana">
 
-                    <button type="button" onclick="calcularMediana()">Calcular</button>
-                </form>
-            
+                <button type="button" onclick="calcularMediana()">Calcular</button>
+            </form>
+
 
             <article class="resultado">
                 <h4>La mediana es:</h4>
