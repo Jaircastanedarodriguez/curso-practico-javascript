@@ -5,40 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e52a56e4f3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <STYLE>A {text-decoration: none;} </STYLE>
     <title>Home | Curso practico de JavaScript</title>
 </head>
 
 <body>
     <header>
-        <h1>Talleres del curso practico de JavaScript</h1>
+        <section class="icon">
+            <img src="./img/curso_practico_js.webp" alt="Curso practico js">
+            <img src="./img/logo_platzi.jpg" alt="Logo platzi" s>
+        </section>
+
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="./index.html">Inicio</a></li>
+                <li class="taller">Talleres
+                    <ul class="talleres">
+                        <li><a href="./Figuras/figuras.html">Figuras geometricas</a></li>
+                        <li><a href="./Descuentos/Descuentos.html">Descuentos de productos</a></li>
+                        <li><a href="./Promedio-Mediana-moda/promedio-mediana-moda.html">Promedio, Mediana y Moda</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>Proyecto
+                    <ul class="proyecto">
+                        <li><a href="./Analisis-Salarial/Salarios.html">Analisis salarial</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Curso practico de JavaScript</h1>
+        <ul>
+            <li>Temas aprendidos:</li>
+            <ul>
+                <li>HTML y CSS</li>
+                <li>Funciones</li>
+                <li>Manipulación del DOM</li>
+                <li>Manipulación de Array</li>
+                <li>Despliegue de proyectos</li>
+            </ul>
+        </ul>
         <p>Estos retos fueron desarrollados por Jair Castañeda en el marco del
             curso practico de JavaScript de Platzi
         </p>
-        
-    </header>
+        <section class="cards">
+            <article class="card figuras">
+                <img src="./img/cube.svg" alt="Figuras">
+                <h2>Figuras geometricas</h2>
+                <p>Calculo de perimetro y area de cuadrados, circulos y triangulos</p>
+            </article>
 
-    <section>
-        <nav>
-            <ol>
-                <li><a href="./Figuras/figuras.html" >Figuras geometricas</a></li>
-                <li><a href="./Descuentos/Descuentos.html">Descuentos de productos</a></li>
-                <li>Promedios, Moda y Mediana
-                    <ul>
-                        <li><a href="./Promedio-Mediana-moda/Promedio.html">Promedios</a></li>
-                        <li><a href="./Promedio-Mediana-moda/Moda.html">Moda</a></li>
-                        <li><a href="./Promedio-Mediana-moda/Mediana.html">Mediana</a></li>
-                    </ul>
-                </li>
-                <li><a href="./Analisis-Salarial/Salarios.html">Salarios</a></li>
+            <article class="card descuentos">
+                <img src="./img/discount.svg" alt="Descuentos">
+                <h2>Precio de productos con descuento</h2>
+                <p>Calcula el precio de los productos con un determinado porcentaje de descuento</p>
+            </article>
 
-            </ol>
-        </nav>
-    </section>
+            <article class="card estadisitica">
+                <img src="./img/chart.svg" alt="Estadistica">
+                <h2>Promedio, Mediana y Moda</h2>
+                <p>Calculo de promedio aritmetico y ponderado, mediana y moda</p>
+            </article>
 
+            <article class="card proyecto">
+                <img src="./img/coins.svg" alt="Salario">
+                <h2>Analisis salarial</h2>
+                <p>Calculo de cantidad de dinero que debes destinar para cada gasto si quieres ahorrar una cantidad fija
+                </p>
+            </article>
+        </section>
+    </main>
 
-
+    <footer>
+        <p>© Copyright 2022. Derechos reservados.</p>
+        <ul>
+            <li><i class="fa fa-github"></i></li>
+            <li><i class="fa fa-linkedin"></i></li>
+        </ul>
+    </footer>
 </body>
 
 </html>

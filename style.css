@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height:60px;
+    background-color: #f8f9f8;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .icon {
+    display: flex;
+}
+
+.menu {
+    /* display: inline-block;
+    padding: 15px 20px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.menu > li {
+    /* display: block; */
+    padding: 15px 180px 15px 0;
+}
+
+.menu .talleres,
+.menu .proyecto {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.menu .talleres li a,
+.menu .proyecto li a{
+    display: block;
+    background-color: #f8f9f8;
+    /* color: #fff; */
+    padding: 15px;
+    /* font-size: 13px; */
+}
+
+.menu li:hover .talleres,
+.menu li:hover .proyecto {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cards {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul li {
+    padding: 10px;
+}
+
+
+
+
+
