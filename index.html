@@ -16,14 +16,17 @@
 <body>
     <header>
         <section class="icon">
-            <img src="./img/curso_practico_js.webp" alt="Curso practico js">
-            <img src="./img/logo_platzi.jpg" alt="Logo platzi" s>
+            <!-- <img src="./img/curso_practico_js.webp" alt="Curso practico js" id="cursoPractico">
+            <img src="./img/logo_platzi.jpg" alt="Logo platzi" id="platzi"> -->
+            <a target="_blank" href="https://github.com/Jaircastanedarodriguez"><img src="./img/iconmonstr-github-1.svg" alt=""></a>
+            <a target="_blank" href=""><img src="./img/iconmonstr-linkedin-3.svg" alt=""></a>
+            
         </section>
 
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="./index.html">Inicio</a></li>
-                <li class="taller">Talleres
+                <li class="inicio"><a href="./index.html">Inicio</a></li>
+                <li class="taller"><a href="">Talleres</a> 
                     <ul class="talleres">
                         <li><a href="./Figuras/figuras.html">Figuras geometricas</a></li>
                         <li><a href="./Descuentos/Descuentos.html">Descuentos de productos</a></li>
@@ -32,7 +35,7 @@
                     </ul>
                 </li>
 
-                <li>Proyecto
+                <li class="menu_proyecto"><a href="">Proyecto</a>
                     <ul class="proyecto">
                         <li><a href="./Analisis-Salarial/Salarios.html">Analisis salarial</a></li>
                     </ul>
@@ -42,55 +45,68 @@
     </header>
 
     <main>
-        <h1>Curso practico de JavaScript</h1>
-        <ul>
-            <li>Temas aprendidos:</li>
+        <section class="container">
+            <h1>Curso practico de JavaScript</h1>
             <ul>
-                <li>HTML y CSS</li>
-                <li>Funciones</li>
-                <li>Manipulación del DOM</li>
-                <li>Manipulación de Array</li>
-                <li>Despliegue de proyectos</li>
+                <li id="temas"><h2>Temas aprendidos:</h2> </li>
+                <ul>
+                    <li>HTML y CSS</li>
+                    <li>Funciones</li>
+                    <li>Manipulación del DOM</li>
+                    <li>Manipulación de Array</li>
+                    <li>Despliegue de proyectos</li>
+                </ul>
             </ul>
-        </ul>
-        <p>Estos retos fueron desarrollados por Jair Castañeda en el marco del
-            curso practico de JavaScript de Platzi
-        </p>
+            <p>Estos retos fueron desarrollados por Jair Castañeda en el marco del
+                curso practico de JavaScript de Platzi
+            </p>
+        </section>
+
         <section class="cards">
-            <article class="card figuras">
-                <img src="./img/cube.svg" alt="Figuras">
-                <h2>Figuras geometricas</h2>
-                <p>Calculo de perimetro y area de cuadrados, circulos y triangulos</p>
-            </article>
+            <a href="./Figuras/figuras.html">
+                <article class="card figuras">
+                    <img src="./img/cube.svg" alt="Figuras">
+                    <h2>Figuras geometricas</h2>
+                    <p>Calculo de perimetro y area de cuadrados, circulos y triangulos</p>
+                </article>
+            </a>
 
-            <article class="card descuentos">
-                <img src="./img/discount.svg" alt="Descuentos">
-                <h2>Precio de productos con descuento</h2>
-                <p>Calcula el precio de los productos con un determinado porcentaje de descuento</p>
-            </article>
+            <a href="./Descuentos/Descuentos.html">
+                <article class="card descuentos">
+                    <img src="./img/discount.svg" alt="Descuentos">
+                    <h2>Precio de productos con descuento</h2>
+                    <p>Calcula el precio de los productos con un determinado porcentaje de descuento</p>
+                </article>
+            </a>
 
-            <article class="card estadisitica">
-                <img src="./img/chart.svg" alt="Estadistica">
-                <h2>Promedio, Mediana y Moda</h2>
-                <p>Calculo de promedio aritmetico y ponderado, mediana y moda</p>
-            </article>
+            <a href="./Promedio-Mediana-moda/promedio-mediana-moda.html">
+                <article class="card estadisitica">
+                    <img src="./img/chart.svg" alt="Estadistica">
+                    <h2>Promedio, Mediana y Moda</h2>
+                    <p>Calculo de promedio aritmetico y ponderado, mediana y moda</p>
+                </article>
+            </a>
 
-            <article class="card proyecto">
-                <img src="./img/coins.svg" alt="Salario">
-                <h2>Analisis salarial</h2>
-                <p>Calculo de cantidad de dinero que debes destinar para cada gasto si quieres ahorrar una cantidad fija
-                </p>
-            </article>
+            <a href="./Analisis-Salarial/Salarios.html">
+                <article class="card proyecto">
+                    <img src="./img/coins.svg" alt="Salario">
+                    <h2>Analisis salarial</h2>
+                    <p>Calculo de cantidad de dinero que debes destinar para cada gasto si quieres ahorrar una cantidad
+                        fija
+                    </p>
+                </article>
+            </a>
+
         </section>
     </main>
 
-    <footer>
+    <!-- <footer>
         <p>© Copyright 2022. Derechos reservados.</p>
         <ul>
             <li><i class="fa fa-github"></i></li>
             <li><i class="fa fa-linkedin"></i></li>
         </ul>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
